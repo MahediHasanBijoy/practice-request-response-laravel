@@ -24,7 +24,7 @@ Route::post('/user', [DemoController::class, 'store'])->name('user.store');
 Route::get('/json', [DemoController::class, 'json']);
 Route::post('/upload', [DemoController::class, 'upload']);
 
-Route::post('/submit/{email}', function(Request $request){
+Route::post('/submit', function(Request $request){
     $email = $request->email;
     return array(
         'success' => true,

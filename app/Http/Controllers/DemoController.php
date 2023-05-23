@@ -27,13 +27,14 @@ class DemoController extends Controller
     // create json response
     function json(){
         // json response
-        return array(
+        $data = array(
             'message'=>'success',
             'data' => array(
                 'name' => 'John Doe',
                 'age' => 25
             )
         );
+        return response()->json($data);
     }
 
     // file upload
